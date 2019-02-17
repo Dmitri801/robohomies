@@ -1,0 +1,73 @@
+body {
+  font-family: "Roboto Slab", serif;
+  background: #eb5757; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #000000,
+    #eb5757
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #000000,
+    #eb5757
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow-y: hidden;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.card {
+  height: 450px;
+  width: 350px;
+  padding: 15px;
+  background: #333;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.searchInput::placeholder {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 1280px) {
+  .card-container {
+    grid-template-columns: 2fr 2fr;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .card-container {
+    grid-template-columns: 4fr;
+  }
+}
+
+@media screen and (max-width: 538px) {
+  .header {
+    height: 200px !important;
+  }
+  h1 {
+    font-size: 3em !important;
+  }
+  main {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+}
